@@ -22,6 +22,33 @@ python3 main.py
 
 and check `/output/entry.txt`.
 
+## Verification
+
+The program is deterministic: running it twice produces byte-identical
+output. Verify it yourself with:
+
+```sh
+python3 main.py && sha256sum /output/entry.txt
+python3 main.py && sha256sum /output/entry.txt
+```
+
+Both runs print `entry: 125 characters (limit 160)` and `wrote /output/entry.txt`,
+and both `sha256sum` outputs must match:
+
+```text
+838eb6d4b43e6d442594b5b30c3df47e642cd9ee9626ff46271458051b7f35d8
+```
+
+The two runs agree because the entry is a fixed constant and nothing
+about the run (time, environment, input) can change it.
+
+How the line works: it follows the classic patch-note shape — "Fixed a
+bug where..." — and applies it to a universal human experience, the
+3 a.m. cringe replay. The punchline lands because "Sleep now saves
+correctly" treats sleep like a game autosave: instead of replaying the
+embarrassing cutscenes, the brain finally persists its progress and
+moves on.
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
