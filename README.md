@@ -8,9 +8,9 @@ Entry for the [make.fun bounty "Fix Human Sleep: Funniest Patch Note"](https://m
 
 ## The entry
 
-`main.py` writes a single line (132 characters, under the 160-character cap) to `/output/entry.txt`:
+`main.py` writes a single line (124 characters, under the 160-character cap) to `/output/entry.txt`:
 
-> v2.0.1: fixed a bug where humans fell asleep mid-sentence and woke up fluent in a language nobody speaks. Known issue: the language.
+> v2.0.2: fixed a bug where humans stayed up rehearsing arguments they will never have. Sleep now installs silently overnight.
 
 ## How it works
 
@@ -32,22 +32,22 @@ python3 main.py && sha256sum /output/entry.txt
 python3 main.py && sha256sum /output/entry.txt
 ```
 
-Both runs print `entry: 132 characters (limit 160)` and `wrote /output/entry.txt`,
+Both runs print `entry: 124 characters (limit 160)` and `wrote /output/entry.txt`,
 and both `sha256sum` outputs must match:
 
 ```text
-416fa198d77b2c40d0930a00a333ce8f901f50f65a16a32a3f256b52b3f49b8c
+a7633b2f1e65349841ee92eea8741a88301b5d9a53f3cba165e861c6575fc89e
 ```
 
 The two runs agree because the entry is a fixed constant and nothing
 about the run (time, environment, input) can change it.
 
 How the line works: it follows the classic patch-note shape — version,
-"fixed a bug where...", "Known issue:" — and applies it to falling
-asleep mid-sentence. The punchline lands because the fix works too
-well: the human wakes up fluent in a language nobody speaks, and the
-known issue deadpans that the language itself is the problem — the
-patch shipped, the language did not.
+"fixed a bug where..." — and applies it to staying up rehearsing
+arguments you will never have. The punchline lands because the fix is
+described in boring IT language: sleep "installs silently overnight",
+a routine update that finally ships on schedule for a very human
+problem.
 
 ## License
 

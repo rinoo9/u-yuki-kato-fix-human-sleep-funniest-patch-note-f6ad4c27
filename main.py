@@ -21,6 +21,14 @@ fluent in a language nobody speaks is the impossible payoff, and the
 "known issue" deadpans that the language itself is the problem — the
 patch shipped, the language did not. Same sleep-patch voice, new bug.
 132 characters, under the 160-char cap.
+
+Third pass — why the new line works: it keeps the patch-note shape
+(version, "fixed a bug", a software-style install line) but changes
+the bug entirely. Staying up rehearsing arguments you will never have
+is a real, relatable failure; "installs silently overnight" treats
+sleep as a routine update that finally ships on schedule, and the joke
+lands because the fix is boring IT language for a very human problem.
+Same sleep-patch voice, new bug. 124 characters, under the 160-char cap.
 """
 
 import os
@@ -30,8 +38,8 @@ MAX_LENGTH = 160
 OUTPUT_PATH = "/output/entry.txt"
 
 ENTRY = (
-    "v2.0.1: fixed a bug where humans fell asleep mid-sentence and woke "
-    "up fluent in a language nobody speaks. Known issue: the language."
+    "v2.0.2: fixed a bug where humans stayed up rehearsing arguments "
+    "they will never have. Sleep now installs silently overnight."
 )
 
 
