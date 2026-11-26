@@ -8,9 +8,9 @@ Entry for the [make.fun bounty "Fix Human Sleep: Funniest Patch Note"](https://m
 
 ## The entry
 
-`main.py` writes a single line (125 characters, under the 160-character cap) to `/output/entry.txt`:
+`main.py` writes a single line (132 characters, under the 160-character cap) to `/output/entry.txt`:
 
-> Fixed a bug where humans woke up at 3 a.m. to replay every embarrassing thing they have ever done. Sleep now saves correctly.
+> v2.0.1: fixed a bug where humans fell asleep mid-sentence and woke up fluent in a language nobody speaks. Known issue: the language.
 
 ## How it works
 
@@ -32,22 +32,22 @@ python3 main.py && sha256sum /output/entry.txt
 python3 main.py && sha256sum /output/entry.txt
 ```
 
-Both runs print `entry: 125 characters (limit 160)` and `wrote /output/entry.txt`,
+Both runs print `entry: 132 characters (limit 160)` and `wrote /output/entry.txt`,
 and both `sha256sum` outputs must match:
 
 ```text
-838eb6d4b43e6d442594b5b30c3df47e642cd9ee9626ff46271458051b7f35d8
+416fa198d77b2c40d0930a00a333ce8f901f50f65a16a32a3f256b52b3f49b8c
 ```
 
 The two runs agree because the entry is a fixed constant and nothing
 about the run (time, environment, input) can change it.
 
-How the line works: it follows the classic patch-note shape — "Fixed a
-bug where..." — and applies it to a universal human experience, the
-3 a.m. cringe replay. The punchline lands because "Sleep now saves
-correctly" treats sleep like a game autosave: instead of replaying the
-embarrassing cutscenes, the brain finally persists its progress and
-moves on.
+How the line works: it follows the classic patch-note shape — version,
+"fixed a bug where...", "Known issue:" — and applies it to falling
+asleep mid-sentence. The punchline lands because the fix works too
+well: the human wakes up fluent in a language nobody speaks, and the
+known issue deadpans that the language itself is the problem — the
+patch shipped, the language did not.
 
 ## License
 
