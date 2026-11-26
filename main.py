@@ -13,6 +13,14 @@ on every run. ``verify_output()`` guards the two bounty constraints
 before anything is written: the line must be non-empty and no longer
 than the 160-character cap. It prints the character count so the
 verification is visible in the run log.
+
+Second pass — why the new line works: it keeps the patch-note shape
+(version, "fixed a bug", "known issue") but changes the bug entirely.
+Falling asleep mid-sentence is a real, relatable failure; waking up
+fluent in a language nobody speaks is the impossible payoff, and the
+"known issue" deadpans that the language itself is the problem — the
+patch shipped, the language did not. Same sleep-patch voice, new bug.
+132 characters, under the 160-char cap.
 """
 
 import os
@@ -22,8 +30,8 @@ MAX_LENGTH = 160
 OUTPUT_PATH = "/output/entry.txt"
 
 ENTRY = (
-    "Fixed a bug where humans woke up at 3 a.m. to replay every "
-    "embarrassing thing they have ever done. Sleep now saves correctly."
+    "v2.0.1: fixed a bug where humans fell asleep mid-sentence and woke "
+    "up fluent in a language nobody speaks. Known issue: the language."
 )
 
 
